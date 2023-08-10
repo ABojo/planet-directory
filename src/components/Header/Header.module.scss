@@ -1,0 +1,75 @@
+.header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+
+  &__container {
+    width: var(--layout-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: 1.75rem;
+    font-family: var(--ff-heading);
+    text-transform: uppercase;
+  }
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+    gap: 2.5rem;
+  }
+
+  &__link {
+    color: var(--color-white);
+    font-size: var(--fs-h4);
+    text-transform: uppercase;
+    font-weight: var(--fw-heading-sm);
+    text-decoration: none;
+    letter-spacing: 0.05rem;
+    padding: 2rem 0;
+    display: block;
+    border-top: 5px solid transparent;
+    transition: all 0.2s;
+    opacity: 0.75;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &--mercury:hover {
+      border-top: 5px solid var(--color-mercury);
+    }
+
+    &--venus:hover {
+      border-top: 5px solid var(--color-venus);
+    }
+
+    &--earth:hover {
+      border-top: 5px solid var(--color-earth);
+    }
+
+    &--mars:hover {
+      border-top: 5px solid var(--color-mars);
+    }
+
+    &--jupiter:hover {
+      border-top: 5px solid var(--color-jupiter);
+    }
+
+    &--saturn:hover {
+      border-top: 5px solid var(--color-saturn);
+    }
+
+    &--uranus:hover {
+      border-top: 5px solid var(--color-uranus);
+    }
+
+    &--neptune:hover {
+      border-top: 5px solid var(--color-neptune);
+    }
+  }
+}
