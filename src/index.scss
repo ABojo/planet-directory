@@ -1,0 +1,49 @@
+:root {
+  --fs-h1: 5rem;
+  --fs-h2: 2.5rem;
+  --fs-h3: 0.75rem;
+  --fs-h4: 0.6875rem;
+  --fs-body: 0.875rem;
+
+  --fw-heading: 400;
+  --fw-body: 500;
+  --fw-heading-sm: 700;
+
+  --ff-heading: "Antonio", sans-serif;
+  --ff-body: "League Spartan", sans-serif;
+
+  --lh-body: 1.5625rem;
+
+  --color-white: #ffffff;
+  --color-black: #070724;
+  --color-grey-1: #38384f;
+  --color-grey-2: #838391;
+  --color-mercury: #419ebb;
+  --color-venus: #eda249;
+  --color-earth: #6f2ed6;
+  --color-mars: #d14c32;
+  --color-jupiter: #d83a34;
+  --color-saturn: #cd5120;
+  --color-uranus: #1ec2a4;
+  --color-neptune: #2d68f0;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: var(--fs-body);
+  font-family: var(--ff-body);
+  font-weight: var(--fw-body);
+  color: var(--color-white);
+  line-height: var(--lh-body);
+}
+
+button {
+  font: inherit;
+}
