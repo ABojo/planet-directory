@@ -26,6 +26,8 @@
   --color-saturn: #cd5120;
   --color-uranus: #1ec2a4;
   --color-neptune: #2d68f0;
+
+  --layout-width: 95%;
 }
 
 *,
@@ -42,6 +44,13 @@ html {
   font-weight: var(--fw-body);
   color: var(--color-white);
   line-height: var(--lh-body);
+}
+
+body {
+  background-image: url("./images/background-stars.svg");
+  background-position: center;
+  background-size: cover;
+  background-color: var(--color-black);
 }
 
 button {
