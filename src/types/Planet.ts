@@ -7,6 +7,7 @@ interface Planet {
   structure: Section;
   geology: Section;
   rotation: string;
+  revolution: string;
   radius: string;
   temperature: string;
   images: Images;
