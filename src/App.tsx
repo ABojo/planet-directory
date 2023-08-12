@@ -22,7 +22,7 @@ function App() {
         <Header planets={planets} />
         <Routes>
           <Route path="/planet/:planet" element={<Planet findPlanetByName={findPlanetByName} />} />
-          <Route index element={<div>HOME</div>} />
+          <Route index element={<Planet findPlanetByName={findPlanetByName} />} />
         </Routes>
       </BrowserRouter>
     </div>

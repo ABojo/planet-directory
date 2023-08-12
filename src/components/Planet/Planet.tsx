@@ -10,7 +10,9 @@ interface PlanetProps {
 
 function Planet({ findPlanetByName }: PlanetProps) {
   const { planet } = useParams();
-  const planetDetails = findPlanetByName(planet);
+  const planetName = planet || "mercury";
+
+  const planetDetails = findPlanetByName(planetName);
   const [activeSection, setActiveSection] = useState<SectionName>("overview");
 
   //reset section when planet changes
