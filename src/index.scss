@@ -1,3 +1,5 @@
+@use "./sass/breakpoints" as *;
+
 :root {
   --fs-h1: 5rem;
   --fs-h2: 2.5rem;
@@ -28,7 +30,22 @@
   --color-uranus: #1ec2a4;
   --color-neptune: #2d68f0;
 
-  --layout-width: 95%;
+  --layout-width: 90%;
+
+  @media (max-width: $bp-1) {
+    --fs-h2: 2rem;
+  }
+
+  @media (max-width: $bp-2) {
+    --fs-h1: 4rem;
+    --fs-h2: 1.75rem;
+    --fs-h3: 0.85rem;
+    --fs-h4: 0.75rem;
+  }
+
+  @media (max-width: $bp-3) {
+    --fs-h3: 0.75rem;
+  }
 }
 
 *,

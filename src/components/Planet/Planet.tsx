@@ -57,7 +57,7 @@ function Planet({ findPlanetByName }: PlanetProps) {
               setActiveSection("overview");
             }}
           >
-            <span>01</span>
+            <span className={styles["planet__button-number"]}>01</span>
             Overview
           </button>
           <button
@@ -66,8 +66,8 @@ function Planet({ findPlanetByName }: PlanetProps) {
               setActiveSection("structure");
             }}
           >
-            <span>02</span>
-            Internal Structure
+            <span className={styles["planet__button-number"]}>02</span>
+            <span className={styles["planet__button-desktop"]}>Internal</span> Structure
           </button>
           <button
             className={`${styles.planet__button} ${activeSection === "geology" && styles["planet__button--active"]}`}
@@ -75,8 +75,8 @@ function Planet({ findPlanetByName }: PlanetProps) {
               setActiveSection("geology");
             }}
           >
-            <span>03</span>
-            Surface Geology
+            <span className={styles["planet__button-number"]}>03</span>
+            Surface <span className={styles["planet__button-desktop"]}>Geology</span>
           </button>
         </div>
       </div>
