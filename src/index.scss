@@ -1,9 +1,9 @@
 :root {
   --fs-h1: 5rem;
   --fs-h2: 2.5rem;
-  --fs-h3: 0.75rem;
-  --fs-h4: 1rem;
-  --fs-body: 0.875rem;
+  --fs-h3: 0.95rem;
+  --fs-h4: 0.85rem;
+  --fs-body: 1.1rem;
 
   --fw-heading: 400;
   --fw-body: 500;
@@ -14,6 +14,7 @@
 
   --lh-body: 1.5625rem;
 
+  --color-border: rgba(255, 255, 255, 0.25);
   --color-white: #ffffff;
   --color-black: #070724;
   --color-grey-1: #38384f;
@@ -39,7 +40,6 @@
 }
 
 html {
-  font-size: var(--fs-body);
   font-family: var(--ff-body);
   font-weight: var(--fw-body);
   color: var(--color-white);
@@ -47,6 +47,7 @@ html {
 }
 
 body {
+  font-size: var(--fs-body);
   background-image: url("/images/background-stars.svg");
   background-position: center;
   background-size: cover;
