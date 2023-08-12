@@ -1,0 +1,106 @@
+@use "../../sass/breakpoints" as *;
+
+.mobile-nav {
+  display: none;
+
+  @media (max-width: $bp-3) {
+    display: block;
+  }
+
+  &__toggle {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &--open {
+      opacity: 0.5;
+    }
+  }
+
+  nav {
+    width: 5rem;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--color-black);
+    position: fixed;
+    top: 5.6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    padding-top: 1rem;
+  }
+
+  &__list {
+    margin: 0 auto;
+    width: var(--layout-width);
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    border-bottom: 1px solid var(--color-border);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  &__link {
+    display: block;
+    padding-block: 1.3rem;
+    color: var(--color-white);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: var(--fw-heading-sm);
+    font-size: var(--fs-body);
+    display: flex;
+    align-items: center;
+
+    img {
+      margin-left: auto;
+    }
+  }
+
+  &__icon {
+    margin-right: 1.5rem;
+    background-color: pink;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 100%;
+
+    &--mercury {
+      background-color: var(--color-mercury);
+    }
+
+    &--venus {
+      background-color: var(--color-venus);
+    }
+
+    &--earth {
+      background-color: var(--color-earth);
+    }
+
+    &--mars {
+      background-color: var(--color-mars);
+    }
+
+    &--jupiter {
+      background-color: var(--color-jupiter);
+    }
+
+    &--saturn {
+      background-color: var(--color-saturn);
+    }
+
+    &--uranus {
+      background-color: var(--color-uranus);
+    }
+
+    &--neptune {
+      background-color: var(--color-neptune);
+    }
+  }
+}

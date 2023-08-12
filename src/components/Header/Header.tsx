@@ -1,3 +1,4 @@
+import MobileNav from "../MobileNav/MobileNav";
 import Planet from "../../types/Planet";
 import { Link } from "react-router-dom";
 import styles from "./Header.module.scss";
@@ -13,6 +14,7 @@ function Header({ planets }: HeaderProps) {
         <Link className={styles.header__logo} to="/">
           The Planets
         </Link>
+        <MobileNav planets={planets} />
         <nav className={styles.header__nav}>
           <ul className={styles.header__list}>
             {planets.map((planet) => {
