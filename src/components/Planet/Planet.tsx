@@ -28,15 +28,15 @@ function Planet({ findPlanetByName }: PlanetProps) {
   const planetImage = activeSection === "structure" ? planetDetails.images.internal : planetDetails.images.planet;
 
   return (
-    <main className={`${styles.planet} ${styles[`planet--${planet}`]}`}>
+    <main className={`${styles.planet} ${styles[`planet--${planetName}`]}`}>
       <div className={styles.planet__head}>
         <div className={styles.planet__graphic}>
-          <img className={styles.planet__img} src={planetImage} alt={`${planet}`} />
+          <img className={styles.planet__img} src={planetImage} alt={`${planetName}`} />
           {activeSection === "geology" && (
             <img
               className={styles.planet__internal}
               src={planetDetails.images.geology}
-              alt={`${planet}'s geological surface`}
+              alt={`${planetName}'s geological surface`}
             />
           )}
         </div>
