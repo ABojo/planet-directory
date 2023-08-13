@@ -14,11 +14,17 @@ function Planet({ findPlanetByName }: PlanetProps) {
 
   const planetDetails = findPlanetByName(planetName);
   const [activeSection, setActiveSection] = useState<SectionName>("overview");
+  const [imageIsLoaded, setImageIsLoaded] = useState(false);
 
   //reset section when planet changes
   useEffect(() => {
     setActiveSection("overview");
   }, [planet]);
+
+  //set loading whenever the planet or section changes
+  useEffect(() => {
+    setImageIsLoaded(false);
+  }, [planet, activeSection]);
 
   //if there are no planet details then display an error message
   if (!planetDetails)
@@ -31,7 +37,15 @@ function Planet({ findPlanetByName }: PlanetProps) {
     <main className={`${styles.planet} ${styles[`planet--${planetName}`]}`}>
       <div className={styles.planet__head}>
         <div className={styles.planet__graphic}>
-          <img className={styles.planet__img} src={planetImage} alt={`${planetName}`} />
+          {!imageIsLoaded && <span className={styles.planet__loader}></span>}
+          <img
+            onLoad={async () => {
+              setImageIsLoaded(true);
+            }}
+            className={`${styles.planet__img} ${imageIsLoaded && styles["planet__img--loaded"]}`}
+            src={`${planetImage}?section=${activeSection}`}
+            alt={`${planetName}`}
+          />
           {activeSection === "geology" && (
             <img
               className={styles.planet__internal}
